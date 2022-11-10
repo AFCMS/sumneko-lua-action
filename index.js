@@ -13,7 +13,7 @@ async function run() {
 
     core.info("Fetching Language Server...");
 
-    const file_path = "./language-server.tar.gz";
+    const file_path = `${process.env.GITHUB_WORKSPACE}/language-server.tar.gz`;
 
     const file = fs.createWriteStream(file_path);
 
@@ -35,7 +35,12 @@ async function run() {
       return;
     }
 
-    exec.exec("tar", ["-xzf", file_path, "-C", "/home/runner/"]);
+    exec.exec("tar", [
+      "-xzf",
+      file_path,
+      "-C",
+      `${process.env.GITHUB_WORKSPACE}/lua-language-server`,
+    ]);
 
     exec.exec("ls", ["/home/runner"]);
 
