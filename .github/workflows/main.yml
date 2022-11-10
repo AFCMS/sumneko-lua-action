@@ -26,5 +26,3 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: /
-
-          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
