@@ -1,0 +1,11 @@
+---
+name: "Sumneko Lua Diagnostics"
+description: "Lint Lua files with Sumneko Lua language server"
+inputs:
+  level:
+    description: "Check Level (Error, Warning, Information, Hint)"
+    required: true
+    default: "Warning"
+runs:
+  using: "node16"
+  main: "index.js"
