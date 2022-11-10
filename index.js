@@ -35,7 +35,7 @@ async function run() {
       return;
     }
 
-    exec.exec("tar", ["-xzf", file_path, "-C", "/tmp/lua-language-server"]);
+    exec.exec("tar", ["-xzf", file_path, "-C", "/home/runner/"]);
 
     if (level === "World") {
     }
