@@ -37,6 +37,8 @@ async function run() {
 
     exec.exec("tar", ["-xzf", file_path, "-C", "/home/runner/"]);
 
+    exec.exec("ls", ["/home/runner"]);
+
     if (level === "World") {
     }
 
