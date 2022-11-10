@@ -2,6 +2,10 @@
 name: "Sumneko Lua Diagnostics"
 description: "Lint Lua files with Sumneko Lua language server"
 inputs:
+  server_version:
+    description: "Sumneko Lua language server version"
+    required: false
+    default: "3.6.2"
   level:
     description: "Check Level (Error, Warning, Information, Hint)"
     required: true
