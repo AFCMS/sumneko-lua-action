@@ -9,8 +9,6 @@ async function run() {
     const level = core.getInput("level", { required: true });
     const version = core.getInput("server_version", { required: true });
 
-    console.log(`Hello ${level}!`);
-
     var http = new HttpClient();
 
     core.info("Fetching Language Server...");
