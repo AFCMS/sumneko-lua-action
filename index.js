@@ -35,6 +35,8 @@ async function run() {
       return;
     }
 
+    exec.exec("ls", [`${process.env.GITHUB_WORKSPACE}`]);
+
     exec.exec("tar", [
       "-xzf",
       file_path,
