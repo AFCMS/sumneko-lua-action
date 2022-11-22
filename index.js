@@ -48,6 +48,11 @@ async function run() {
 
     exec.exec("ls", ["/home/runner"]);
 
+    exec.exec(
+      `${process.env.GITHUB_WORKSPACE}/lua-language-server/bin/lua-language-server`,
+      ["--check", process.env.GITHUB_WORKSPACE, "--checklevel=warning"]
+    );
+
     if (level === "World") {
     }
 
