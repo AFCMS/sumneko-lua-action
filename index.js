@@ -37,6 +37,8 @@ async function run() {
 
     exec.exec("ls", [`${process.env.GITHUB_WORKSPACE}`]);
 
+    exec.exec("mkdir", [`${process.env.GITHUB_WORKSPACE}/lua-language-server`]);
+
     exec.exec("tar", [
       "-xzf",
       file_path,
