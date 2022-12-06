@@ -39,7 +39,11 @@ async function run() {
       return;
     }
 
+    core.info("Running tree");
+
     exec.exec("tree");
+
+    core.info("Running ls");
 
     exec.exec("ls", [`${process.env.GITHUB_WORKSPACE}`]);
 
