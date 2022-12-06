@@ -54,6 +54,11 @@ async function run() {
 
     exec.exec("ls", ["/home/runner"]);
 
+    exec.exec("chmod", [
+      "+x",
+      `${process.env.GITHUB_WORKSPACE}/lua-language-server/bin/lua-language-server`,
+    ]);
+
     exec.exec(
       `${process.env.GITHUB_WORKSPACE}/lua-language-server/bin/lua-language-server`,
       ["--check", process.env.GITHUB_WORKSPACE, "--checklevel=warning"]
