@@ -13,7 +13,11 @@ async function run() {
 
     core.info("Fetching Language Server...");
 
+    core.info(`GITHUB_WORKSPACE: ${process.env.GITHUB_WORKSPACE}`);
+
     const file_path = `${process.env.GITHUB_WORKSPACE}/language-server.tar.gz`;
+
+    core.info(`Downloading to "${file_path}"`);
 
     const file = fs.createWriteStream(file_path);
 
@@ -34,6 +38,8 @@ async function run() {
       core.setFailed(`Failed to download language server: ${error}`);
       return;
     }
+
+    exec.exec("tree");
 
     exec.exec("ls", [`${process.env.GITHUB_WORKSPACE}`]);
 
